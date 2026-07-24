@@ -10,7 +10,7 @@ void drawField(int ball_x, int ball_y, int paddle1_y, int paddle2_y, int score1,
   for (int y = 0; y < HEIGHT; y++) {
     for (int x = 0; x < WIDTH; x++) {
       if (y == 0 || y == HEIGHT - 1) {
-        printf("#");
+        printf("=");
       } else if (x == PADDLE1_X && (y >= paddle1_y - PADDLE_HALF_SIZE &&
                                     y <= paddle1_y + PADDLE_HALF_SIZE)) {
         printf("|");
