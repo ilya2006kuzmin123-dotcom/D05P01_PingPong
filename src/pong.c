@@ -61,9 +61,6 @@ int main() {
     s_y = 0;
     while (ball_x > 2 && ball_x < 78) {
       key = getchar();
-      if (key == '\n') {
-        continue;
-      }
       if (key == 'a' && paddle1_y > 2) {
         paddle1_y -= 1;
       }
