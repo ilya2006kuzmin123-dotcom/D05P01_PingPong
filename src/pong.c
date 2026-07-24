@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void drawField(int ball_x, int ball_y, int paddle1_y, int paddle2_y, int score1,
-               int score2) {
+int drawField(int ball_x, int ball_y, int paddle1_y, int paddle2_y, int score1,
+              int score2) {
   int WIDTH = 80;
   int HEIGHT = 25;
   int PADDLE_HALF_SIZE = 1;
@@ -40,10 +40,11 @@ void drawField(int ball_x, int ball_y, int paddle1_y, int paddle2_y, int score1,
       }
     }
   }
+  return 0;
 }
 
 int main() {
-  char key = ' ';
+  char key;
   int ball_x = 40;
   int ball_y = 13;
   int paddle1_y = 13;
@@ -51,14 +52,13 @@ int main() {
   int score1 = 0;
   int score2 = 0;
   int s = 1;
-  int s_y;
   drawField(ball_x, ball_y, paddle1_y, paddle2_y, score1, score2);
   while (score1 != 21 && score2 != 21) {
     ball_x = 40;
     ball_y = 13;
     paddle1_y = 13;
     paddle2_y = 13;
-    s_y = 0;
+    int s_y = 0;
     while (ball_x > 2 && ball_x < 78) {
       key = getchar();
       if (key == 'a' && paddle1_y > 2) {
