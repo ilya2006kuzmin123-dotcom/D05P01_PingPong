@@ -67,7 +67,6 @@ int main() {
     paddle2_y = 13;
     int s_y = 0;
     while (ball_x > 2 && ball_x < 78) {
-
       key = getch();
       if (key == 'a' && paddle1_y > 2) {
         paddle1_y -= 1;
