@@ -50,7 +50,7 @@ int main() {
   initscr();
   cbreak();
   noecho();
-  timeout(5);
+  timeout(100);
   int key;
   int ball_x = 40;
   int ball_y = 13;
